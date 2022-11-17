@@ -1,0 +1,65 @@
+solana is an opensource project implement a new, high-perfomance, permissionless blockchain.
+Geneva switzerland
+2017 published
+proof of history
+Antoly yakovenko
+faster transaction
+low fee
+better for environment
+use rust
+scalable 
+
+rd /s /q "path"
+sudo apt-get update
+sudo apt install build-essential
+
+cli method to create token
+creating wallet
+solana-keygen new
+pubkey: 7FHEuN3F5jYiMrgSxWQFazigongr2PDhPzTHUEBCnbJz
+
+Save this seed phrase and your BIP39 passphrase to recover your new keypair:
+soup tired replace joy tube garage tiny giraffe pencil divorce bird kitchen
+
+solana-keygen pubkey
+solana balance --url devnet
+solana airdrop 2 pbkey --url devnet
+
+for creating token we are going to use a library which is called spl token
+cargo install spl-token-cli
+
+
+now creating our own token
+spl-token create-token --url devnet
+BvHsPJuozdFntxBZkBVrPuDryVHBqxXYhE16aNcfmFYv
+
+
+
+creating account 
+spl-token create-account BvHsPJuozdFntxBZkBVrPuDryVHBqxXYhE16aNcfmFYv --url devnet
+EiVKGRMxDLox1HmWLnyvRE8FtghH2HggafQ7EuH2UHEd
+
+
+for checking balance
+spl-token balance BvHsPJuozdFntxBZkBVrPuDryVHBqxXYhE16aNcfmFYv --url devnet
+
+
+token minting so that we can have the token in our account
+spl-token mint BvHsPJuozdFntxBZkBVrPuDryVHBqxXYhE16aNcfmFYv 100 --url devnet 
+
+restricting the supply of minting the token
+spl-token supply BvHsPJuozdFntxBZkBVrPuDryVHBqxXYhE16aNcfmFYv --url devnet
+spl-token authorize BvHsPJuozdFntxBZkBVrPuDryVHBqxXYhE16aNcfmFYv min --disable --url devnet
+
+burning the token or deleting the token
+spl-token burn BvHsPJuozdFntxBZkBVrPuDryVHBqxXYhE16aNcfmFYv 10 --url devnet
+
+wallet address 
+3XvkZTaLy3QBHXxWtkBQb3sAMh3Rs7f1vkrv3NcY3ZT1
+
+
+transfer token
+spl-token transfer tokenaddreess tokenquantity senderwalletaddress --url devnet
+
+
+
