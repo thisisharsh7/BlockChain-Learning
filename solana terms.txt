@@ -50,3 +50,27 @@ Lamports are the smallest unit of Solana. If you're familiar with Ethereum ecosy
 Each account has a public key - it acts like an address for the account. Ya know how your wallet has an address that you use for receiving those spicy NFTs? Same thing! Solana addresses are just base58 encoded strings.
 
 executable is a boolean field that tells us if the account contains executable data. Data is what's stored in the account, and rent we'll cover later!
+
+key.toBase58. This is the encoding of Solana addresses as strings.
+
+
+Writing data to the blockchain
+
+To write data to the blockchain, you need to submit transactions. Think of it like a data write command that can be rejected if certain conditions aren't met.
+
+To make sense of transactions and how they work, you'll need to know what key pairs are. As the name suggests, these are a pairing of keys - one is public, and the other is private. The public key points to the address of an account on the network and each pubkey has a corresponding private/secret key.
+The Web3.js library has a couple of helper functions to work with keypairs. You can generate keypairs and use them to get the public or secret keys.
+
+Secret keys can have a couple of different formats -
+
+Mnemonic phrase - this is the most common
+pill tomorrow foster begin walnut borrow virtual kick shift mutual shoe scatter
+A bs58 string - wallets sometimes export this
+5MaiiCavjCmn9Hs1o3eznqDEhRwxo7pXiAYez7keQUviUkauRiTMD8DrESdrNjN8zd9mTmVhRvBJeg5vhyvgrAhG
+Bytes - when writing code, we usually deal with the raw bytes as an array of numbers
+[ 174, 47, 154, 16, 202, 193, 206, 113, 199, 190, 53, 133, 169, 175, 31, 56, 222, 53, 138, 189, 224, 216, 117,173, 10, 149, 53, 45, 73, 251, 237, 246, 15, 185, 186, 82, 177, 240, 148, 69, 241, 227, 167, 80, 141, 89, 240, 121, 121, 35, 172, 247, 68, 251, 226, 218, 48, 63, 176, 109, 168, 89, 238, 135, ]
+Wtf do these instructions look like? They contain:
+
+an identifier of the program you intend to invoke
+an array of accounts that will be read from and/or written to
+data structured as a byte array that is specified to the program being invoked

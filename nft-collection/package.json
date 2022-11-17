@@ -9,6 +9,7 @@
   "author": "harsh kumar",
   "license": "ISC",
   "dependencies": {
+    "@solana/web3.js": "^1.66.2",
     "@thirdweb-dev/sdk": "^3.6.0",
     "fs": "^0.0.1-security"
   },
