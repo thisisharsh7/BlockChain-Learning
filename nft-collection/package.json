@@ -1,0 +1,16 @@
+{
+  "name": "nft-collection",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "harsh kumar",
+  "license": "ISC",
+  "dependencies": {
+    "@thirdweb-dev/sdk": "^3.6.0",
+    "fs": "^0.0.1-security"
+  },
+  "type": "module"
+}

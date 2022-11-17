@@ -1,0 +1,52 @@
+Decentralized application that runs on Peer2Peer network
+It runs on every node of the network .
+It runs on every particular node which is a part of the etherium network.
+whereras Centralized application that runs on one single main network.
+
+Decentralized networks has two component that makes a 
+decentralized application. 
+smart contract + Front End == Dapps
+distributy immutablity and ledger
+Trustworthy
+No cenorship
+They pay
+can never go down
+
+Decentralize autonomous organization
+Heirarchy of different smart contracts
+Full democratized
+Voting required
+No trusted intermediary to count vote
+services offered are handled automaticlaly
+all acitivity is transparent and fully public
+
+
+20.07.2016--> Hard Fork
+47678 bitcoin soft fork sigbit adopt 1mb to size 8mb bitcoin cash
+presearch
+LBRY
+D.tube
+
+
+solana core cousrse
+-------
+send transaction passed to rpc
+RPC Remote proedure call
+Devnet Testnet Mainnet-beta send to the solana blockchain state
+
+reading data from blockchain---
+Starting with the Solana Alphabet, we have A for accounts. We're starting with accounts because smart contracts on Solana, referred to as "programs", are stateless - meaning they don't store anything except code. Everything happens in accounts so they're central to Solana, they're used for storage, contracts, and for native blockchain programs.
+
+Data accounts - these store data lol
+Program accounts - these store executable programs (AKA smart contracts)
+Native accounts - these are for core blockchain functions like Stake, Vote
+
+Within data accounts, you have two further types -
+System owned accounts
+PDA (Program Derived Address) accounts
+
+Lamports are the smallest unit of Solana. If you're familiar with Ethereum ecosystem this is sorta like Gwei. One lamport = 0.000000001 SOL, so this field just tells us how much SOL the account has.
+
+Each account has a public key - it acts like an address for the account. Ya know how your wallet has an address that you use for receiving those spicy NFTs? Same thing! Solana addresses are just base58 encoded strings.
+
+executable is a boolean field that tells us if the account contains executable data. Data is what's stored in the account, and rent we'll cover later!
